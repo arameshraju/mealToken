@@ -4,7 +4,7 @@ app.config(function($routeProvider) {
             // route for the contactus page
             .when('/login', {
                 templateUrl : 'views/login.html',
-                controller  : 'defaultCtrl'
+                controller  : 'loginCtrl'
             })
             .when('/menu/:typ', {
                 templateUrl : 'menus.html',

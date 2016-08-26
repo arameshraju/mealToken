@@ -1,6 +1,48 @@
+<div ng-controller="purchaseReturnCtrl">
 <div class="row">
     <div class="col-sm-12">
-        <h1>Action -purchase</h1>
-       
+        <h1>Masters -Department</h1>
+            {{deptName}}
     </div>
+</div>
+<div class="row">
+     <div class="col-lg-2 col-md-4 col-sm-6  col-lg-offset-5 col-md-offset-4 col-sm-offset-3">
+    <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Date</label>
+            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Date">
+          </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Vendor Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Vendor Name">
+          </div>
+         
+        <div class="form-group">
+            <label for="exampleInputPassword1">Stock Itme</label>
+            <select class="form-control" id="exampleInputPassword1">
+                <option>Stock Item1</option>
+                <option>Stock Item2</option>
+                <option>Stock Item3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Quantity</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Quantity">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Rate</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Rate">
+          </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Store</label>
+            <select class="form-control" id="exampleInputPassword1">
+                <option>Store1</option>
+                <option>Store2</option>
+            </select>
+          </div>
+
+          <button type="submit" ng-click="loginAction()" class="btn btn-default">Submit</button>
+</form>
+    </div> 
+</div>    
 </div>

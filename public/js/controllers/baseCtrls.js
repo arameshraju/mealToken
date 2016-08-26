@@ -1,4 +1,12 @@
 
+app.controller('loginCtrl',function($scope, $window){
+    
+    $scope.loginAction=function(){
+      $window.location.href = '#/dashboard';  
+    }
+    
+  
+});
 app.controller('defaultCtrl',function($scope){
   
 });

@@ -1,6 +1,47 @@
+<div ng-controller="stockCtrl">
 <div class="row">
     <div class="col-sm-12">
-        <h1>Masters - Stock item</h1>
-       
+        <h1>Masters -Department</h1>
+            {{deptName}}
     </div>
+</div>
+        <div class="row">
+        <div class="panel-heading"> 
+        <h3 class="panel-title">Master</h3> </div> 
+        <div class="panel-body">  content </div> </div>
+    
+    </div>
+
+<div class="row">
+     <div class="col-lg-2 col-md-4 col-sm-6  col-lg-offset-5 col-md-offset-4 col-sm-offset-3">
+    <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Stock Item Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Stock Item Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Description</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description">
+          </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Mesurment</label>
+                <select class="form-control" id="exampleInputPassword1">
+                <option>KG</option>
+                <option>Liter</option>
+                <option>Grams</option>
+                <option>Nos</option>
+            </select>
+          </div> 
+        <div class="form-group">
+            <label for="exampleInputPassword1">Stock Group</label>
+            <select class="form-control" id="exampleInputPassword1">
+                <option>Group1</option>
+                <option>Group2</option>
+            </select>
+          </div>
+
+          <button type="submit" ng-click="loginAction()" class="btn btn-default">Submit</button>
+</form>
+    </div> 
+</div>    
 </div>
