@@ -1,6 +1,9 @@
 
 app.controller('deptCtrl',function($scope){
   $scope.deptName="NewDepartMent"
+  $scope.deptSave=function(){
+    alert("This is Demo App, You can't save New");  
+  };
 });
 
 app.controller('empCtrl',function($scope){

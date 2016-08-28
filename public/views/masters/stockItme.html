@@ -1,16 +1,28 @@
 <div ng-controller="stockCtrl">
 <div class="row">
-    <div class="col-sm-12">
-        <h1>Masters -Department</h1>
-            {{deptName}}
-    </div>
+<div class="col-sm-12">
+<div class="panel panel-primary"> 
+    <div class="panel-heading"> 
+        <h3 class="panel-title">Stock Group List</h3> </div> 
+        <div class="panel-body">
+            <table class="table">
+            <thead>
+                <tr>
+                    <td>Stock Item</td><td>Description</td><td>Unit</td><td>Group</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="si in stockItem">
+                    <td>{{si.stockitem}}</td><td>{{si.desc}}</td><td>{{si.unit}}</td><td>{{si.stockGroup}}</td>
+                </tr>
+                </tbody>
+                
+            </table>
+        
+        </div> 
+        </div>
 </div>
-        <div class="row">
-        <div class="panel-heading"> 
-        <h3 class="panel-title">Master</h3> </div> 
-        <div class="panel-body">  content </div> </div>
-    
-    </div>
+</div>
 
 <div class="row">
      <div class="col-lg-2 col-md-4 col-sm-6  col-lg-offset-5 col-md-offset-4 col-sm-offset-3">
@@ -40,7 +52,8 @@
             </select>
           </div>
 
-          <button type="submit" ng-click="loginAction()" class="btn btn-default">Submit</button>
+                <button type="submit" ng-click="saveAction()" class="btn btn-default">Save</button>
+
 </form>
     </div> 
 </div>    

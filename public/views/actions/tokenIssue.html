@@ -1,10 +1,5 @@
 <div ng-controller="tokenCtrl">
-<div class="row">
-    <div class="col-sm-12">
-        <h1>Masters -Department</h1>
-            {{deptName}}
-    </div>
-</div>
+
 <div class="row">
      <div class="col-lg-2 col-md-4 col-sm-6  col-lg-offset-5 col-md-offset-4 col-sm-offset-3">
     <form>
@@ -16,12 +11,11 @@
         <div class="form-group">
             <label for="exampleInputPassword1">Food Item</label>
             <select class="form-control" id="exampleInputPassword1">
-                <option>Meal</option>
-                <option>Snacks</option>
+                <option ng-repeat="si in stockItem">{{si.stockitem}}</option>
             </select>
+    
           </div>
-
-          <button type="submit" ng-click="loginAction()" class="btn btn-default">Submit</button>
+          <button type="submit" ng-click="saveAction()" class="btn btn-default">Save</button>
 </form>
     </div> 
 </div>    
