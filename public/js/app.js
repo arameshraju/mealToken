@@ -85,8 +85,8 @@ app.controller('mainCtrl',function($scope){
         {stockitem:'Curd',desc:'fresh Curd',unit:'kgs',stockGroup:'Milk Products'}
     ];
     $scope.foodItem=[
-        {fooditem:'Meal General',desc:'Regular meal normal days'},
-        {fooditem:'Special meal',desc:'Special meal festivals days'}
+        {fooditem:'Meal General',desc:'Regular meal normal days',rate:25,empRate:50},
+        {fooditem:'Special meal',desc:'Special meal festivals days',rate:50,empRate:100}
     ];
     
     $scope.saveAction=function(){
