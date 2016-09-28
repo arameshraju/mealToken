@@ -52,11 +52,7 @@ app.controller('mainCtrl',function($scope){
                     {type:'reports',lable:'Employee Report',pageUlr:'#/reports/employeeReport'},
                     {type:'reports',lable:'Cost Report',pageUlr:'#/reports/costReport'}
                  ];
-    $scope.department=[];
-//        {deptName:'Admin',desc:'Admin Department'},
-//        {deptName:'Accounts',desc:'Admin Department'},
-//        {deptName:'Manufacting',desc:'Manufacting Department'}
-//    ];
+
     $scope.employee=[
         {empId:'123',empName:'Srinivas',phone:9849012345,deptId:'Admin'},
         {empId:'124',empName:'Venkat',phone:9849212345,deptId:'Admin'},
