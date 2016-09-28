@@ -1,6 +1,10 @@
 
-app.controller('deptCtrl',function($scope){
+app.controller('deptCtrl',function($scope,$http){
   $scope.deptName="NewDepartMent"
+  $http.get('/api/department').then(function(response) {
+        $scope.department=response.data; 
+  });
+      
   $scope.deptSave=function(){
     alert("This is Demo App, You can't save New");  
   };
