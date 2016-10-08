@@ -13,7 +13,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="si in stockItem">
-                    <td>{{si.stockitem}}</td><td>{{si.desc}}</td><td>{{si.unit}}</td><td>{{si.stockGroup}}</td>
+                    <td>{{si.stockitem}}</td><td>{{si.stockitemdesc}}</td><td>{{si.mesurement}}</td><td>{{si.stockgroup}}</td>
                 </tr>
                 </tbody>
                 
@@ -29,15 +29,15 @@
     <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Stock Item Name</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Stock Item Name">
+            <input type="text" class="form-control" ng-model="master.stockitem" id="exampleInputEmail1" placeholder="Stock Item Name">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Description</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description">
+            <input type="text" class="form-control"  ng-model="master.stockitemdesc"  id="exampleInputPassword1" placeholder="Description">
           </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Mesurment</label>
-                <select class="form-control" id="exampleInputPassword1">
+                <select class="form-control"  ng-model="master.mesurement"  id="exampleInputPassword1">
                 <option>KG</option>
                 <option>Liter</option>
                 <option>Grams</option>
@@ -46,7 +46,7 @@
           </div> 
         <div class="form-group">
             <label for="exampleInputPassword1">Stock Group</label>
-            <select class="form-control" id="exampleInputPassword1">
+            <select class="form-control"  ng-model="master.stockgroup"  id="exampleInputPassword1">
                 <option>Group1</option>
                 <option>Group2</option>
             </select>

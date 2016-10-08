@@ -13,7 +13,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="e in employee">
-                    <td>{{e.empId}}</td><td>{{e.empName}}</td><td>{{e.phone}}</td><td>{{e.deptId}}</td>
+                    <td>{{e.empId}}</td><td>{{e.name}}</td><td>{{e.phone}}</td><td>{{e.deptId}}</td>
                 </tr>
                 </tbody>
                 
@@ -41,7 +41,7 @@
         <div class="form-group">
             <label for="exampleInputPassword1">Department</label>
             <select class="form-control" ng-model="master.deptId" id="exampleInputPassword1">
-                <option ng-repeat="e in department" >{{e.deptName}}</option>
+                <option ng-repeat="e in department" >{{e.name}}</option>
                 
             </select>
           </div>

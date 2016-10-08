@@ -1,0 +1,10 @@
+DB joins
+
+db.house.aggregate([{
+... $lookup :{
+... from :"family",
+... localField:"type",
+... foreignField:"type",
+... as : "house_types"
+... }
+... }])

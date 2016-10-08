@@ -9,7 +9,7 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 router.get('/', function(req, res) {
     var deptJson=[];
- var mdl = require("../models/departmentModel");
+ var mdl = require("../models/stockitemModel");
     mdl.find({},function(err,data){
        if(err){
           res.send("Bad Request");
@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
 });
 router.post('/', function (req, res) {
     
- var mdl = require("../models/departmentModel");
+ var mdl = require("../models/stockitemModel");
     console.log(req);
   var newMdl=new  mdl(req.body); 
     newMdl.save(function (err) {
