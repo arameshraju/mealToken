@@ -61,7 +61,12 @@ app.controller('mainCtrl',['$scope','appRest',function($scope,appRest){
         }, function(reason) {
             alert('Failed: ' + reason);
         });   
-    
+        var promiseToken= appRest.getTokenList();
+        promiseToken.then(function(response) {
+            $scope.tokens=response;
+        }, function(reason) {
+            alert('Failed: ' + reason);
+        });   
     $scope.menu= [
                     {type:'master',lable:'Department',pageUlr:'#/masters/department'},
                     {type:'master',lable:'Employee',pageUlr:'#/masters/employee'},

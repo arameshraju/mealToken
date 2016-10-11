@@ -4,33 +4,14 @@ var Schema = mongoose.Schema;
 //create schema contactGroup
 var tokenSchema= new Schema({
 	empid:{
-		type:String
-	},
-	name:{
-		type:String,        
-        required:true
-
-	},
-    tokenType:{
-		type:String,        
-        required:true
-
+		type:String,
+		required:true,
 	},
 	fooditem: {  
 		type:String,
         required:true
 
-	},
-    foodcost: {  
-		type:Number,
-        required:true
-	},
-    fooddiscount: {  
-		type:Number,
-        required:true
-	},
-    
-    tokendate: {  
+	},tokendate: {  
 		type:Date,
         required:true
 

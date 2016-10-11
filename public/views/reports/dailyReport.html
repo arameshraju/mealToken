@@ -1,14 +1,53 @@
+<div ng-controller="dailyCtrl">
 <div class="row">
     <div class="col-sm-12">
-        <h1>Reports - Daily Report</h1>
 
 <div class="panel panel-primary"> 
     <div class="panel-heading"> 
-        <h3 class="panel-title">Report title</h3> </div> 
+        <h3 class="panel-title">Daily Report</h3>
+        
+<div class="input-group col-lg-2 col-md-4 col-sm-6  col-lg-offset-5 col-md-offset-4 col-sm-offset-3">
+  <span class="input-group-addon" id="basic-addon1">Date </span>
+  <input type="date" class="form-control" placeholder="select Date" aria-describedby="basic-addon1">
+       <span class="input-group-btn">
+        <button class="btn btn-default" type="button">View</button>
+      </span>
+</div>
+        
+    </div> 
         <div class="panel-body">
-            
-            Report content 
-        </div> 
+            <table class="table">
+            <thead>
+                <tr>
+                    <th>Group</th>
+                    <th>Name</th>
+                    <th>Meal</th>
+                    <th class="text-right">Cost</th>
+                    <th class="text-right">Discount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="t in tokens" >
+                    <td>{{t.tokenType}}</td>
+                    <td>{{t.name}}</td>
+                    <td>{{t.fooditem}}</td>
+                    <td align="right" >{{t.foodcost |number:2}}</td>
+                    <td align="right">{{t.fooddiscount |number:2}}</td>
+                </tr>
+            </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+                </tfoot>
+            </table>
+               
+           </div> 
 </div>
     </div>
+</div>
 </div>

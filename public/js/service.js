@@ -99,7 +99,47 @@ app.service('appRest',['$http','$q','appConst',function ($http,$q,appConst){
        });
      return deferred.promise;
 
-  };             
+  };    
+    service.getGroupMonthlyList=function(){
+       console.log("Calling Token List");
+        var deferred = $q.defer();
+     $http.get('/api/reports/groupmonthly' )
+       .success(function(response) { 
+          deferred.resolve(response);
+       }).error(function(msg) {
+          deferred.reject(msg);
+                       console.log(msg);
+       });
+     return deferred.promise;
+
+  };  
+    service.getFoodMonthlyList=function(){
+       console.log("Calling Token List");
+        var deferred = $q.defer();
+     $http.get('/api/reports/foodmonthly' )
+       .success(function(response) { 
+          deferred.resolve(response);
+       }).error(function(msg) {
+          deferred.reject(msg);
+                       console.log(msg);
+       });
+     return deferred.promise;
+
+  };  
+    service.getEmployeeMonthlyList=function(){
+       console.log("Calling Token List");
+        var deferred = $q.defer();
+     $http.get('/api/reports/employeemonthly' )
+       .success(function(response) { 
+          deferred.resolve(response);
+       }).error(function(msg) {
+          deferred.reject(msg);
+                       console.log(msg);
+       });
+     return deferred.promise;
+
+  };  
+    
 }
 ]);
 

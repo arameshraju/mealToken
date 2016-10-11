@@ -1,7 +1,104 @@
+<div ng-controller="monthlyReportCtrl">
 <div class="row">
     <div class="col-sm-12">
-        <h1>Reports -monthlyReport</h1>
-       <div class="panel panel-primary">
-        </div>
+
+<div class="panel panel-primary"> 
+    <div class="panel-heading"> 
+        <h3 class="panel-title">Monthly Report</h3>
+        
+
+        
+    </div> 
+        <div class="panel-body">
+            <h3>Group wise Report</h3>
+            <table class="table">
+            <thead>
+                <tr>
+                    <th>Group</th>
+                    <th>Count</th>
+                    <th class="text-right">Cost</th>
+                    <th class="text-right">Discount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="t in gruopMonthlyList" >
+                    <td>{{t._id}}</td>
+                    <td>{{t.totalcount|number}}</td>
+                    <td align="right" >{{t.totalCost |number:2}}</td>
+                    <td align="right">{{t.totalDiscount |number:2}}</td>
+                </tr>
+            </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h3>Food wise Report</h3>
+            <table class="table">
+            <thead>
+                <tr>
+                    <th>food</th>
+                    <th>Count</th>
+                    <th class="text-right">Cost</th>
+                    <th class="text-right">Discount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="t in foodMonthlyList" >
+                    <td>{{t._id}}</td>
+                    <td>{{t.totalcount|number}}</td>
+                    <td align="right" >{{t.totalCost |number:2}}</td>
+                    <td align="right">{{t.totalDiscount |number:2}}</td>
+                </tr>
+            </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <h3>Employee wise Report</h3>
+            <table class="table">
+            <thead>
+                <tr>
+                    
+                    <th>Name</th>
+                    <th>Count</th>
+                    <th class="text-right">Cost</th>
+                    <th class="text-right">Discount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="t in empMonthlyList" >
+                    <td>{{t._id}}</td>
+                    <td>{{t.totalcount|number}}</td>
+                    <td align="right" >{{t.totalCost |number:2}}</td>
+                    <td align="right">{{t.totalDiscount |number:2}}</td>
+                </tr>
+            </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                    </tr>
+                </tfoot>
+            </table>
+               
+           </div> 
+</div>
     </div>
+</div>
 </div>

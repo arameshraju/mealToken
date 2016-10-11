@@ -17,6 +17,7 @@ var sg = require('./routes/stockgroup');
 var si = require('./routes/stockitem');
 var store = require('./routes/store');
 var token = require('./routes/token');
+var reports = require('./routes/reports');
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   // we're connected! and enabled Rest
@@ -28,6 +29,7 @@ db.once('open', function() {
     app.use('/api/stockitem', si);
     app.use('/api/store', store);
     app.use('/api/token', token);
+    app.use('/api/reports', reports);
 
 });
 
