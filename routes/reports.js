@@ -16,7 +16,7 @@ router.get('/groupmonthly/', function(req, res) {
                 _id: '$tokenType',  //$region is the column name in collection
                 totalcount: {$sum: 1},
                 totalCost: {$sum: '$foodcost'},
-                totalDiscount: {$sum: 'fooddiscount'}
+                totalDiscount: {$sum: '$fooddiscount'}
             }
     }],function(err,data){
        if(err){
@@ -36,7 +36,7 @@ router.get('/foodmonthly/', function(req, res) {
                 _id: '$fooditem',  //$region is the column name in collection
                 totalcount: {$sum: 1},
                 totalCost: {$sum: '$foodcost'},
-                totalDiscount: {$sum: 'fooddiscount'}
+                totalDiscount: {$sum: '$fooddiscount'}
             }
     }],function(err,data){
        if(err){
@@ -56,7 +56,7 @@ router.get('/employeemonthly/', function(req, res) {
                 _id: '$name',  //$region is the column name in collection
                 totalcount: {$sum: 1},
                 totalCost: {$sum: '$foodcost'},
-                totalDiscount: {$sum: 'fooddiscount'}
+                totalDiscount: {$sum: '$fooddiscount'}
             }
     }],function(err,data){
        if(err){
